@@ -1,0 +1,83 @@
+class student:
+    def __init__(self,name,id):
+        self.name = name
+        self.id = id
+    def __repr__(self):
+        return self.__str__()
+    def __str__(self):
+        return f"Name:{self.name}, ID:{self.id}\n"    
+class register_student(student):
+    def add_std(self,std):
+        string = f"Name of the Student: {std.name}, Assigned ID of the Student: {std.id}\n"
+        with open('Journal Entry.txt','a') as file:
+            file.write(string)
+    def show_detail(self):
+        try:
+            with open('Journal Entry.txt','r') as data:
+                info = data.readlines()
+                for line in info:
+                    print(line.split())
+        except:
+            print(f"---No New Students---")
+class course:
+    def __init__(self,course_name,course_id):
+        self.course_name = course_name
+        self.course_id = course_id
+    def __repr__(self):
+        return self.__str__()
+    def __str__(self):
+        return f"Name: {self.course_name}, ID: {self.course_id}\n"    
+    def show_course(self):
+        try:
+            with open('course details.txt','r') as file:
+                data = file.readlines()
+                for index , lines in enumerate(data):
+                    print(f"{index+1}. {lines.strip(' ')}")
+        except:
+            print(f"All courses are taken")
+class enrollment:
+    def enroll_std(self,student_ids,course_ids):
+        enroll_list = f"{student_ids.id},{course_ids.course_id}\n"
+        with open('Enrollment.txt','a') as file:
+            file.write(enroll_list)    
+        print(f"Student: {student_ids.name} is enrolled in {course_ids.course_name}\n")
+    def show_student_courses(self,student_id):
+        try:
+            with open('Enrollment.txt', 'r') as file:
+                print("\n--- Current Enrollments ---")
+                for line in file:
+                    print(line.strip())
+        except:
+            print("No enrollments found yet.")
+def main_menu():
+    reg_std = register_student("", "")
+    course_1 = course("", "")
+    enroll = enrollment()
+    while True:
+        print("1. Register New Student")
+        print("2. Show All Courses")
+        print("3. Enroll Student in Course")
+        print("4. Show Student Enrollments")
+        print("5. Exit")
+        choice = input("Enter your choice: ")
+        if choice == '1':
+            name = input("Enter student name: ")
+            student_id = input("Enter student ID: ")
+            new_student = student(name, student_id)
+            reg_std.add_std(new_student)
+        elif choice == '2':
+            course_1.show_course()
+        elif choice == '3':
+            std__id = input("Enter student ID to enroll: ")
+            course__id = input("Enter course ID to enroll: ")
+            new_std = student("", std__id) 
+            old_course = course("", course__id)
+            enroll.enroll_std(new_std, old_course)
+        elif choice == '4':
+            student_present = input("Enter student ID to show enrollments: ")
+            enroll.show_student_courses(student_present)
+        elif choice == '5':
+            print("Exiting program.")
+            break
+        else:
+            print("Invalid choice. Please try again.")
