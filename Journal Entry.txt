@@ -1,0 +1,21 @@
+Ibtesam Ahmed Khan , 157
+Shoaib Ahmed , 134
+Huzaifa Khan , 154
+Umar Khan , 148
+Arham Raza , 135
+Saima Khan , 159
+Abdul Rafay Khan , 147
+Abdul Rafay Khan 147
+Shoaib Ahmed,134
+Shoaib Ahmed,134
+Name of the Student: Shoaib Ahmed, Assigned ID of the Student134
+Name of the Student: Shoaib Ahmed, Assigned ID of the Student 134
+Name of the Student: Shoaib Ahmed, Assigned ID of the Student: 134
+Name of the Student: Ibtesam Ahmed Khan, Assigned ID of the Student: 154
+Name of the Student: Basit, Assigned ID of the Student: 9
+Name of the Student: Basit, Assigned ID of the Student: 10
+Name of the Student: Ibtesam Ahmed Khan, Assigned ID of the Student: 156
+Name of the Student: SHOAIB, Assigned ID of the Student: 145
+Name of the Student: SHOAIB, Assigned ID of the Student: 134
+Name of the Student: Shoaib, Assigned ID of the Student: 134
+Name of the Student: Shoaib Khan, Assigned ID of the Student: 135
